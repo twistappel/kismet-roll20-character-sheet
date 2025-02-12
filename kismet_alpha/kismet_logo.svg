@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg964"
+   width="64"
+   height="11"
+   viewBox="0 0 64 11"
+   sodipodi:docname="kismet_logo.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   inkscape:export-filename="kismet_logo_128.png"
+   inkscape:export-xdpi="1117.0909"
+   inkscape:export-ydpi="1117.0909"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs968" />
+  <sodipodi:namedview
+     id="namedview966"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="22"
+     inkscape:cx="22.5"
+     inkscape:cy="5.5454545"
+     inkscape:window-width="1920"
+     inkscape:window-height="979"
+     inkscape:window-x="1920"
+     inkscape:window-y="1080"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g970" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Image"
+     id="g970">
+    <text
+       xml:space="preserve"
+       style="font-size:11.907px;fill:#a85e84;stroke-width:0.992248;-inkscape-stroke:none;stop-color:#000000;fill-opacity:1"
+       x="-0.39534959"
+       y="10.703509"
+       id="text288"
+       inkscape:export-filename="kismet_logo.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan286"
+         x="-0.39534959"
+         y="10.703509"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.907px;font-family:'Uncial Antiqua';-inkscape-font-specification:'Uncial Antiqua, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#a85e84;stroke-width:0.992248;fill-opacity:1">Kismet</tspan></text>
+  </g>
+</svg>
