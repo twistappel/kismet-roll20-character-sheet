@@ -1,7 +1,7 @@
 .charsheet {
-    background-color: #888888;
-    border: 2px solid black;
-    color:black;
+    background-color: #2d2f3a;
+    border: 2px solid #a85e84;
+    color:#979aa8;
     width: 840px;
 }
 
@@ -11,9 +11,9 @@
 
 /* -------------------------------------------------------------------------- */
 
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
   margin: 0;
   background-color: rgba(255,255,255,0.5);
 }
@@ -38,7 +38,7 @@ div[class="repcontainer editmode"] ~ div[class^="repcontrol"] button[class="btn 
 .charsheet .repcontrol_edit,
 .charsheet .repcontrol_del {
     display: block;
-    background: #7c746a;
+    background: #61657a;
     color: white;
     box-shadow:none;
     font-size:0.7em;
@@ -227,19 +227,19 @@ input.sheet-hide:checked ~ h4.sheet-section-head {
 }
 
 .charsheet div.sheet-skills4 {
-    display: none;    
+    display: none;
 }
 
 .charsheet div.sheet-skills5 {
-    display: none;    
+    display: none;
 }
 
 .charsheet div.sheet-skills6 {
-    display: none;    
+    display: none;
 }
 
 .charsheet div.sheet-skills7 {
-    display: none;    
+    display: none;
 }
 
 .sheet-showskills[value="1"]:checked ~ div.sheet-skills1 {
@@ -285,7 +285,7 @@ input.sheet-hide:checked ~ h4.sheet-section-head {
 
 .charsheet span.sheet-is-config {
     text-align: center;
-    display: inline-block;    
+    display: inline-block;
     width: 5%;
     height: 16px;
     font-size: 9px;
@@ -301,7 +301,7 @@ input.sheet-hide:checked ~ h4.sheet-section-head {
 .charsheet input.sheet-HideConfig {
      width: 5%;
     height: 16px;
-    cursor: pointer;	
+    cursor: pointer;
     margin-left: auto;
     margin-top: auto;
 	/*position: absolute;
@@ -317,9 +317,9 @@ input.sheet-hide:checked ~ h4.sheet-section-head {
 }
 
 .charsheet label.sheet-configitem {
-    margin-left: 10px; 
-    width: 50px; 
-    font-size: .9em; 
+    margin-left: 10px;
+    width: 50px;
+    font-size: .9em;
     font-weight: normal
 }
 
@@ -355,98 +355,98 @@ input.sheet-arrow {
 
 .sheet-showskills[value="1"]:checked ~ h4.sheet-section-head {
     background-image: linear-gradient(black, #840032);
-    background-color: #840032;
-    color: white;
+    background-color: #61657a;
+    color: #a85e84;
     text-align: center;
     font-weight: normal;
     font-style: normal;
-    border: 1px solid black;
+    border: 1px solid #5e98a8;
 }
 
 .sheet-showskills[value="2"]:checked ~ h4.sheet-section-head {
     background-image: linear-gradient(black, #262626);
     background-color: black;
-    color: white;
+    color: #a85e84;
     text-align: center;
     font-weight: normal;
     font-style: normal;
-    border: 1px solid black;
+    border: 1px solid #5e98a8;
 }
 
 .sheet-showskills[value="3"]:checked ~ h4.sheet-section-head {
     background-image: linear-gradient(black, #112749);
     background-color: #112749;
-    color: white;
+    color: #a85e84;
     text-align: center;
     font-weight: normal;
     font-style: normal;
-    border: 1px solid black;
+    border: 1px solid #5e98a8;
 }
 
 .sheet-showskills[value="4"]:checked ~ h4.sheet-section-head {
     background-image: linear-gradient(black, #273f13);
     background-color: #273f13;
-    color: white;
+    color: #a85e84;
     text-align: center;
     font-weight: normal;
     font-style: normal;
-    border: 1px solid black;
+    border: 1px solid #5e98a8;
 }
 
 .sheet-showskills[value="5"]:checked ~ h4.sheet-section-head {
     background-image: linear-gradient(black, #6B5A38);
     background-color: #6B5A38;
-    color: white;
+    color: #a85e84;
     text-align: center;
     font-weight: normal;
     font-style: normal;
-    border: 1px solid black;
+    border: 1px solid #5e98a8;
 }
 
 .sheet-showskills[value="6"]:checked ~ h4.sheet-section-head {
     background-image: linear-gradient(black, #31657b);
     background-color: #31657b;
-    color: white;
+    color: #a85e84;
     text-align: center;
     font-weight: normal;
     font-style: normal;
-    border: 1px solid black;
+    border: 1px solid #5e98a8;
 }
 
 .sheet-showskills[value="7"]:checked ~ h4.sheet-section-head {
     background-image: linear-gradient(black, #65356f);
     background-color: #65356f;
-    color: white;
+    color: #a85e84;
     text-align: center;
     font-weight: normal;
     font-style: normal;
-    border: 1px solid black;
+    border: 1px solid #5e98a8;
 }
 
-.sheet-showpulp[value="1"]:checked ~ h4.sheet-section-head, 
+.sheet-showpulp[value="1"]:checked ~ h4.sheet-section-head,
 .sheet-showpulp[value="1"]:checked ~ div.sheet-pulphpsection h4.sheet-section-head,
 .sheet-showpulp[value="1"]:checked ~ div.sheet-heroinfo h4.sheet-section-head {
     background-image: linear-gradient(#750000, #800000);
     background-color: #800000;
-    color: white;
+    color: #a85e84;
     text-align: center;
     font-weight: normal;
     font-style: normal;
-    border: 1px solid black;
+    border: 0px solid black;
 }
 
 /* -------------------------------------------------------------------------- */
 
 h4.sheet-section-head {
-    background-color: black;
-    color: white;
+    background-color: none;
+    color: #a85e84;
     text-align: center;
     font-weight: normal;
     font-style: normal;
-    border: 1px solid black;
+    border: 0px solid black;
 }
 
-hr { 
+hr {
   display: block;
   margin-top: 0.7em;
   margin-bottom: 0.7em;
@@ -456,8 +456,8 @@ hr {
 }
 
 div.sheet-section {
-    background-color: #c4beb6; /* #c9c7c3  #d1cdc5 #c9c8c5   */
-    border: 2px solid black;
+    background-color: #474b5a; /* #c9c7c3  #d1cdc5 #c9c8c5   */
+    border: 2px solid #739da9;
     padding: 1%;
     margin: 0 0 1% 0;
 }
@@ -469,14 +469,14 @@ table td.sheet-attr {
 
 table td.sheet-attr-label {
     height: 56px;
-    font-size: 120%; 
+    font-size: 120%;
     text-align: center;
 }
 
 input[type="text"].sheet-attr-input {
-    width: 52px; 
-    height: 40px; 
-    font-size: 200%; 
+    width: 52px;
+    height: 40px;
+    font-size: 200%;
     text-align: center;
 }
 
@@ -1401,7 +1401,7 @@ button[type=roll].sheet-dice-roll {
 
 /* Button Smaller */
 button[type=roll].sheet-smallbutton-roll {
-  color: #18650D; 
+  color: #18650D;
   background-color: #248c15;
   font-weight: bolder;
   font-size: 12px;
@@ -1418,7 +1418,7 @@ button[type=roll].sheet-smallbutton-roll {
 
 /* Non-Skill Button Smaller */
 button[type=roll].sheet-smallnonskillbutton-roll {
-  color: #000000; 
+  color: #000000;
   background-color: #000000;
   font-weight: bolder;
   font-size: 12px;
@@ -1434,7 +1434,7 @@ button[type=roll].sheet-smallnonskillbutton-roll {
 
 /* Button Even Smaller */
 button[type=roll].sheet-evensmallerbutton-roll {
-  color: #000000; 
+  color: #000000;
   background-color: #1a1a1a;
   font-weight: bolder;
   font-size: 1px;

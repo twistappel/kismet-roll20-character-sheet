@@ -11,6 +11,7 @@
       "displayname": "Era",
       "type": "select",
       "options": [
+        "Kismet|8"
         "Invictus|7",
         "Dark Ages|1",
         "Down Darker Trails|5",
@@ -19,7 +20,7 @@
         "Icarus|6",
         "End Times|4"
       ],
-      "default": "1920s"
+      "default": "Kismet"
     },
     {
       "attribute": "showpulp",

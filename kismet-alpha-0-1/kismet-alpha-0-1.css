@@ -1,0 +1,60 @@
+.charsheet {
+    background-color: #2d2f3a;
+    border: 2px solid #a85e84;
+    color:#979aa8;
+    /*width: 840px;*/
+}
+/*HEADINGS*/
+h2.sheet-section-head {
+    background-color: none;
+    color: #a85e84;
+    text-align: left;
+    font-weight: normal;
+    font-style: normal;
+    border: none
+}
+
+/*SECTION*/
+.charsheet .sheet-flex-section{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 300px;
+  align-items: stretch;
+  align-content: stretch;
+  background-color: #474b5a;
+  border: 0.5px solid #5e98a8;
+  padding: 10px;
+}
+
+/*ADVENTURER INFO*/
+.sheet-flex-section > div {
+  text-align: left;
+  max-width: 50%;
+  flex-basis: 40%;
+}
+
+ .sheet-heroinfo-row {
+  display: flex;
+}
+
+.sheet-heroinfo-column {
+  flex: 50%;
+  padding: 10px;
+}*/
+/*FORM*/
+
+.sheet-attr-label {
+    color: #979aa8;
+    font-weight: 500;
+    text-align: left;
+    margin: 5px 15px 5px 0;
+}
+
+input[type="text"].sheet-attr-input {
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  background-color: #979aa8;
+  border: 1px solid #5e98a8;
+}
