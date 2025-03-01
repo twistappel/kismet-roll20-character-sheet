@@ -1,50 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 .charsheet {
     background-color: #2d2f3a;
-    border: 2px solid #a85e84;
+    border: 0.5px solid #a85e84;
     color:#979aa8;
+    font-family: 'Montserrat Alternates', Arial;
+}
+/*Main Outline*/
+.charsheet .sheet-grid-section{
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 20% 30% 40% 10%;
+  grid-template-areas: "options     options    options"
+                       "logo        heroinfo   heroinfo"
+                       "stats       stats      stats"
+                       "footer      footer     footer";
+  grid-gap: 2px;
+}
+.charsheet div.sheet-block{
+  display: grid;
+  justify-content: center;
+  padding: 5px;
+}
+.charsheet div.sheet-options{
+  grid-area: options;
+}
+.charsheet div.sheet-logo{
+  grid-area: logo;
+  justify-content: center;
+}
+.charsheet div.sheet-heroinfo{
+  grid-area: heroinfo;
+}
+.charsheet div.sheet-stats{
+  grid-area: stats;
+}
+.charsheet div.sheet-footer{
+  grid-area: footer;
 }
 
-.charsheet .sheet-heroinfo{
+/*Hero Info*/
+.charsheet .sheet-item{
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows:  60px 60px 60px;
+  grid-template-areas:"name         name        species    pronoun"
+                      "occupation   occupation  archetype  archetype"
+                      "birthplace   birthplace  residence  residence";
+  grid-gap: 2px;
   margin: 10px, 10px, 10px, 10px;
-  background-color: #474b5a;
+  justify-items: left;
+  padding: 10px;
   border: 0.5px solid #5e98a8;
 }
-
-.row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
+.charsheet div.sheet-subitem{
+  display: grid;
+  justify-content: center;
+  padding: 5px;
 }
-
-.column {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
+.charsheet div.sheet-logo{
+  grid-area: logo;
 }
-
-.double-column {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 2;
+.charsheet div.sheet-name{
+  grid-area: name;
 }
-
-.logo-column {
-    padding: 0px;
-    height: 100px;
+.charsheet div.sheet-species{
+  grid-area: species;
 }
-
-.sheet-heroinfo-column {
-  flex: 50%;
-  padding: 10px;
-  height: 30px
+.charsheet div.sheet-pronoun{
+  grid-area: pronoun;
 }
-
-/*HEROINFO INPUT*/
-
-.sheet-attr-label {
+.charsheet div.sheet-occupation{
+  grid-area: occupation;
+}
+.charsheet div.sheet-archetype{
+  grid-area: archetype;
+}
+.charsheet div.sheet-birthplace{
+  grid-area: birthplace;
+}
+.charsheet div.sheet-residence{
+  grid-area: residence;
+}
+.charsheet > label {
     color: #979aa8;
     font-weight: 500;
     text-align: left;
@@ -57,4 +95,30 @@ input[type="text"].sheet-attr-input {
   padding: 10px;
   background-color: #979aa8;
   border: 1px solid #5e98a8;
+}
+
+/*Tabs*/
+/* configure the tab buttons */
+.charsheet .sheet-skills,
+.charsheet .sheet-combat,
+.charsheet .sheet-spells,
+.charsheet .sheet-inventory,
+.charsheet .sheet-backstory{
+    display: none;
+}
+
+/* style the active button */
+.charsheet .sheet-tabstoggle[value="skills"] ~ div .sheet-button0 {outline: 2px solid #a85e84;}
+.charsheet .sheet-tabstoggle[value="combat"] ~ div .sheet-button1 {outline: 2px solid #a85e84;}
+.charsheet .sheet-tabstoggle[value="spells"] ~ div .sheet-button2 {outline: 2px solid #a85e84;}
+.charsheet .sheet-tabstoggle[value="inventory"] ~ div .sheet-button3 {outline: 2px solid #a85e84;}
+.charsheet .sheet-tabstoggle[value="backstory"] ~ div .sheet-button4 {outline: 2px solid #a85e84;}
+
+/* show the selected tab */
+.charsheet .sheet-tabstoggle[value="skills"] ~ div.sheet-skils,
+.charsheet .sheet-tabstoggle[value="combat"] ~ div.sheet-combat,
+.charsheet .sheet-tabstoggle[value="spells"] ~ div.sheet-spells,
+.charsheet .sheet-tabstoggle[value="inventory"] ~ div.sheet-inventory,
+.charsheet .sheet-tabstoggle[value="backstory"] ~ div.sheet-backstory {
+    display: block;
 }

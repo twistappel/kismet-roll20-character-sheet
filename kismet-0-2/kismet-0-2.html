@@ -1,19 +1,85 @@
-<div class="sheet-heroinfo">
-  <div class='row'>
-    <div class='column'>
-      <div class='logo-column'>
-        <img src="https://github.com/twistappel/kismet-roll20-character-sheet/blob/master/kismet_alpha/kismet_logo.png?raw=true" alt="Kismet">
-      </div>
-    </div>
-    <div class='column'>
-      <div class='sheet-heroinfo-column'>
-        <div class="heroinfo-name">
-            <label class="sheet-attr-label" for="attr_name">Name</label>
-            <input class="sheet-attr-input" type="text" id="attr_name" name="attr_name">
+<div class="sheet-grid-section">
+  <div class="sheet-options sheet-block">
+    <span><h4>Options</h4></span>
+  </div>
+  <div class="sheet-logo sheet-block">
+    <img src="https://github.com/twistappel/kismet-roll20-character-sheet/blob/master/kismet_alpha/kismet_logo_128.png?raw=true" alt="Kismet">
+  </div>
+    <div class="sheet-heroinfo sheet-block">
+      <div class="sheet-item">
+        <div class="sheet-name sheet-subitem">
+          <span data-i18n="name-u">Name</span>
+          <input type="text" name="attr_name" placeholder="Name" style="width: 130%">
         </div>
-        <label class="sheet-attr-label" for="attr_archetype">Archetype</label>
-        <input class="sheet-attr-input" type="text" id="attr_archetype" name="attr_archetype">
+        <div class="sheet-species sheet-subitem">
+          <span data-i18n="species-u">Species</span>
+          <input type="text" name="attr_species" placeholder="Species"  style="width: 100%">
+        </div>
+        <div class="sheet-pronoun sheet-subitem">
+          <span data-i18n="pronoun-u">Pronouns</span>
+          <input type="text" name="attr_pronoun" placeholder="Pronouns"  style="width: 100%">
+        </div>
+        <div class="sheet-occupation sheet-subitem">
+          <span data-i18n="occupation-u">Occupation</span>
+          <input type="text" name="attr_occupation" placeholder="Occupation" style="width: 130%">
+        </div>
+        <div class="sheet-archetype sheet-subitem">
+          <span data-i18n="archetype-u">Archetype</span>
+          <input type="text" name="attr_archetype" placeholder="Archetype" style="width: 130%">
+        </div>
+        <div class="sheet-birthplace sheet-subitem">
+          <span data-i18n="birthplace-u">Birthplace</span>
+          <input type="text" name="attr_birthplace" placeholder="Birthplace" style="width: 130%">
+        </div>
+        <div class="sheet-residence sheet-subitem">
+          <span data-i18n="residence-u">Residence</span>
+          <input type="text" name="attr_residence" placeholder="Residence" style="width: 130%">
+        </div>
       </div>
     </div>
+  </div>
+  <div class="sheet-stats sheet-block">
+    <input type="hidden" class="sheet-tabstoggle" name="attr_sheetTab" value="skills" />
+    <div>
+        <button type="action" name="act_skills" class="sheet-button0">Skills</button>
+        <button type="action" name="act_combat" class="sheet-button1">Combat</button>
+        <button type="action" name="act_spells" class="sheet-button2">Spells</button>
+        <button type="action" name="act_inventory" class="sheet-button3">Inventory</button>
+        <button type="action" name="act_backstory" class="sheet-button4">Backstory</button>
+    </div>
+    <div class="sheet-skills">
+        <h2>Skills</h2>
+        <span>Skills Stuff Goes here </span>
+    </div>
+    <div class="sheet-combat">
+        <h2>Combat</h2>
+        <span>Combat Stuff Goes here</span>
+    </div>
+    <div class="sheet-spells">
+        <h2>Spells</h2>
+        <span>Spells go here</span>
+    </div>
+    <div class="sheet-inventory">
+        <h2>Inventory</h2>
+        <span>Inventory goes here</span>
+    </div>
+    <div class="sheet-backstory">
+        <h2>Backstory</h2>
+        <span>Character backstory goes here</span>
+    </div>
+    <script type="text/worker">
+        const buttonlist = ["skills", "combat", "spells", "inventory", "backstory"];
+        buttonlist.forEach(button => {
+            on(`clicked:${button}`, function() {
+                setAttrs({
+                    sheetTab: button
+                });
+            });
+        });
+    </script>
+  </div>
+
+  <div class="sheet-footer sheet-block">
+    <span><h4>Footer</h4></span>
   </div>
 </div>
