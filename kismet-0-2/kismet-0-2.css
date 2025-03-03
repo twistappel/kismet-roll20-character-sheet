@@ -54,8 +54,8 @@
   grid-template-rows: 10% 20% 20% 40% 10%;
   grid-template-areas: "options     options    options"
                        "logo        heroinfo   heroinfo"
-                       "attributes  attributes attributes"
                        "stats       stats      stats"
+                       "tabs        tabs       tabs"
                        "footer      footer     footer";
   grid-gap: 2px;
 }
@@ -73,20 +73,23 @@
   justify-content: center;
   align-items: center;
 }
-.charsheet div.sheet-attributes{
-  grid-area: stats;
-}
 .charsheet div.sheet-heroinfo{
   grid-area: heroinfo;
 }
 .charsheet div.sheet-stats{
   grid-area: stats;
 }
+.charsheet div.sheet-tabs{
+  grid-area: tabs;
+}
 .charsheet div.sheet-footer{
   grid-area: footer;
 }
 
 /*LOGO*/
+.charsheet div.sheet-logo{
+  grid-area: logo;
+}
 .charsheet .sheet-logo img{
 }
 
@@ -103,14 +106,10 @@
   padding: 10px;
 /*  border: 0.5px solid #5e98a8;*/
 }
-
 .charsheet div.sheet-subitem-heroinfo{
   display: grid;
   justify-content: center;
   padding: 5px;
-}
-.charsheet div.sheet-logo{
-  grid-area: logo;
 }
 .charsheet div.sheet-name{
   grid-area: name;
@@ -139,7 +138,32 @@
     text-align: left;
     margin: 5px 15px 5px 0;
 }
-
+/*Stats*/
+.charsheet .sheet-item-stats{
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows:  60px 60px;
+  grid-template-areas:"statblock   statblock  points  conditions";
+  grid-gap: 2px;
+  margin: 10px, 10px, 10px, 10px;
+  justify-items: center;
+  padding: 10px;
+/*  border: 0.5px solid #5e98a8;*/
+}
+.charsheet div.sheet-subitem-stats{
+  display: grid;
+  justify-content: center;
+  padding: 5px;
+}
+.charsheet div.sheet-statblock{
+  grid-area: statblock;
+}
+.charsheet div.sheet-points{
+  grid-area: points;
+}
+.charsheet div.sheet-statblock{
+  grid-area: conditions;
+}
 /*Tabs*/
 /* configure the tab buttons */
 .charsheet .sheet-skills,
@@ -256,6 +280,7 @@
   padding: 10px;
 /*  border: 0.5px solid #5e98a8;*/
 }
+
 /*FOOTER*/
 .charsheet .sheetitem-footer{
 

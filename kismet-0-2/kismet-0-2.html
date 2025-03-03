@@ -1,44 +1,47 @@
 <div class="sheet-grid-section">
   <div class="sheet-options sheet-block">
-    <span><h4>Options</h4></span>
+    <span><p>Options</p></span>
   </div>
   <div class="sheet-logo sheet-block">
-    <img src="https://github.com/twistappel/kismet-roll20-character-sheet/blob/master/kismet_alpha/kismet_logo_128.png?raw=true" alt="Kismet">
+      <img src="https://github.com/twistappel/kismet-roll20-character-sheet/blob/master/kismet_alpha/kismet_logo_128.png?raw=true" alt="Kismet">
   </div>
     <div class="sheet-heroinfo sheet-block">
-      <div class="sheet-item">
-        <div class="sheet-name sheet-subitem">
+      <div class="sheet-item-heroinfo">
+        <div class="sheet-name sheet-subitem-herofinfo">
           <span data-i18n="name-u">Name</span>
-          <input type="text" name="attr_name" placeholder="Name" style="width: 130%">
+          <input type="text" name="attr_name" class="sheet-heroinfo-input" placeholder="Who are you?">
         </div>
-        <div class="sheet-species sheet-subitem">
+        <div class="sheet-species sheet-subitem-herofinfo">
           <span data-i18n="species-u">Species</span>
-          <input type="text" name="attr_species" placeholder="Species"  style="width: 100%">
+          <input type="text" name="attr_species" class="sheet-heroinfo-input" placeholder="What are you?">
         </div>
-        <div class="sheet-pronoun sheet-subitem">
+        <div class="sheet-pronoun sheet-subitem-herofinfo">
           <span data-i18n="pronoun-u">Pronouns</span>
-          <input type="text" name="attr_pronoun" placeholder="Pronouns"  style="width: 100%">
+          <input type="text" name="attr_pronoun" class="sheet-heroinfo-input" placeholder="Pronouns">
         </div>
-        <div class="sheet-occupation sheet-subitem">
+        <div class="sheet-occupation sheet-subitem-herofinfo">
           <span data-i18n="occupation-u">Occupation</span>
-          <input type="text" name="attr_occupation" placeholder="Occupation" style="width: 130%">
+          <input type="text" name="attr_occupation" class="sheet-heroinfo-input" placeholder="What do you do?">
         </div>
-        <div class="sheet-archetype sheet-subitem">
+        <div class="sheet-archetype sheet-subitem-herofinfo">
           <span data-i18n="archetype-u">Archetype</span>
-          <input type="text" name="attr_archetype" placeholder="Archetype" style="width: 130%">
+          <input type="text" name="attr_archetype" class="sheet-heroinfo-input" placeholder="How are you?">
         </div>
-        <div class="sheet-birthplace sheet-subitem">
+<!--        <div class="sheet-birthplace sheet-subitem-herofinfo">
           <span data-i18n="birthplace-u">Birthplace</span>
-          <input type="text" name="attr_birthplace" placeholder="Birthplace" style="width: 130%">
+          <input type="text" name="attr_birthplace" class="sheet-heroinfo-input" placeholder="Where are you from?">
         </div>
-        <div class="sheet-residence sheet-subitem">
+        <div class="sheet-residence sheet-subitem-herofinfo">
           <span data-i18n="residence-u">Residence</span>
-          <input type="text" name="attr_residence" placeholder="Residence" style="width: 130%">
-        </div>
+          <input type="text" name="attr_residence" class="sheet-heroinfo-input" placeholder="Where do you live?">
+        </div>-->
       </div>
     </div>
   </div>
-  <div class="sheet-stats sheet-block">
+    <div class="sheet-stats sheet-block">
+    <span><p>Stats</p></span>
+  </div>
+  <div class="sheet-tabs sheet-block">
     <input type="hidden" class="sheet-tabstoggle" name="attr_sheetTab" value="skills" />
     <div>
         <button type="action" name="act_skills" class="sheet-button0">Skills</button>
@@ -78,7 +81,8 @@
         });
     </script>
   </div>
+
   <div class="sheet-footer sheet-block">
-    <span><h4>Footer</h4></span>
+    <span><p>Call of Cthulhu® is a trademark of Chaosium Inc.</p></span>
   </div>
 </div>
