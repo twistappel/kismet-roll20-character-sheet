@@ -3,16 +3,58 @@
 .charsheet {
     background-color: #2d2f3a;
     border: 0.5px solid #a85e84;
-    color:#979aa8;
+    color: #979aa8;
     font-family: 'Montserrat Alternates', Arial;
+}
+/*STYLES*/
+.charsheet p {
+    color: #979aa8;
+    font-family: 'Montserrat Alternates', Arial;
+}
+/*Headings*/
+.charsheet h2{
+  color: #5e98a8;
+}
+/*Input*/
+  /*Hero Info*/
+.charsheet input[type="text"].sheet-heroinfo-input {
+  vertical-align: middle;
+  margin: 2px 2px 2px 2px;
+  padding: 5px;
+  color: #cccdd3;
+  background-color: #61657a;
+  border: 1px solid #5e98a8;
+  width: 100%;
+}
+/*  Skills*/
+.charsheet input[type="text"].sheet-skill-input {
+    width: 30px;
+    height: 23px;
+    text-align: center;
+    background-color: rgba(255,255,255,0.5);
+    margin-bottom: 1px;
+}
+
+.charsheet input[type="number"].sheet-skill-input {
+    width: 30px;
+    height: 23px;
+    text-align: center;
+    margin-bottom: 1px;
+}
+
+.charsheet input[type="text"].sheet-skill-name-input {
+    height: 23px;
+    text-align: left;
+    margin-bottom: 1px;
 }
 /*Main Outline*/
 .charsheet .sheet-grid-section{
   display: grid;
   grid-template-columns: 33% 33% 33%;
-  grid-template-rows: 20% 30% 40% 10%;
+  grid-template-rows: 10% 20% 20% 40% 10%;
   grid-template-areas: "options     options    options"
                        "logo        heroinfo   heroinfo"
+                       "attributes  attributes attributes"
                        "stats       stats      stats"
                        "footer      footer     footer";
   grid-gap: 2px;
@@ -21,6 +63,7 @@
   display: grid;
   justify-content: center;
   padding: 5px;
+  border: 0.5px solid #5e98a8;
 }
 .charsheet div.sheet-options{
   grid-area: options;
@@ -28,6 +71,10 @@
 .charsheet div.sheet-logo{
   grid-area: logo;
   justify-content: center;
+  align-items: center;
+}
+.charsheet div.sheet-attributes{
+  grid-area: stats;
 }
 .charsheet div.sheet-heroinfo{
   grid-area: heroinfo;
@@ -39,21 +86,25 @@
   grid-area: footer;
 }
 
+/*LOGO*/
+.charsheet .sheet-logo img{
+}
+
 /*Hero Info*/
-.charsheet .sheet-item{
+.charsheet .sheet-item-heroinfo{
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows:  60px 60px 60px;
+  grid-template-rows:  60px 60px;
   grid-template-areas:"name         name        species    pronoun"
-                      "occupation   occupation  archetype  archetype"
-                      "birthplace   birthplace  residence  residence";
+                      "occupation   occupation  archetype  archetype";
   grid-gap: 2px;
   margin: 10px, 10px, 10px, 10px;
   justify-items: left;
   padding: 10px;
-  border: 0.5px solid #5e98a8;
+/*  border: 0.5px solid #5e98a8;*/
 }
-.charsheet div.sheet-subitem{
+
+.charsheet div.sheet-subitem-heroinfo{
   display: grid;
   justify-content: center;
   padding: 5px;
@@ -76,25 +127,17 @@
 .charsheet div.sheet-archetype{
   grid-area: archetype;
 }
-.charsheet div.sheet-birthplace{
+/*.charsheet div.sheet-birthplace{
   grid-area: birthplace;
 }
 .charsheet div.sheet-residence{
   grid-area: residence;
-}
+}*/
 .charsheet > label {
     color: #979aa8;
     font-weight: 500;
     text-align: left;
     margin: 5px 15px 5px 0;
-}
-
-input[type="text"].sheet-attr-input {
-  vertical-align: middle;
-  margin: 5px 10px 5px 0;
-  padding: 10px;
-  background-color: #979aa8;
-  border: 1px solid #5e98a8;
 }
 
 /*Tabs*/
@@ -106,19 +149,114 @@ input[type="text"].sheet-attr-input {
 .charsheet .sheet-backstory{
     display: none;
 }
-
+/*style buttons*/
+.charsheet .sheet-tabstoggle ~ div .sheet-button0 {
+  color: #979aa8;
+  font-weight: 500;
+  background-color: #2d2f3a;
+  border: 0;
+  border-radius: 0px;
+  box-shadow: none;
+}
+.charsheet .sheet-tabstoggle ~ div .sheet-button1 {
+  color: #979aa8;
+  font-weight: 500;
+  background-color: #2d2f3a;
+  border: 0;
+  border-radius: 0px;
+  box-shadow: none;
+}
+.charsheet .sheet-tabstoggle ~ div .sheet-button2 {
+  color: #979aa8;
+  font-weight: 500;
+  background-color: #2d2f3a;
+  border: 0;
+  border-radius: 0px;
+  box-shadow: none;
+}
+.charsheet .sheet-tabstoggle ~ div .sheet-button3 {
+  color: #979aa8;
+  font-weight: 500;
+  background-color: #2d2f3a;
+  border: 0;
+  border-radius: 0px;
+  box-shadow: none;
+}
+.charsheet .sheet-tabstoggle ~ div .sheet-button4 {
+  color: #979aa8;
+  font-weight: 500;
+  background-color: #2d2f3a;
+  border: 0;
+  border-radius: 0px;
+  box-shadow: none;
+}
 /* style the active button */
-.charsheet .sheet-tabstoggle[value="skills"] ~ div .sheet-button0 {outline: 2px solid #a85e84;}
-.charsheet .sheet-tabstoggle[value="combat"] ~ div .sheet-button1 {outline: 2px solid #a85e84;}
-.charsheet .sheet-tabstoggle[value="spells"] ~ div .sheet-button2 {outline: 2px solid #a85e84;}
-.charsheet .sheet-tabstoggle[value="inventory"] ~ div .sheet-button3 {outline: 2px solid #a85e84;}
-.charsheet .sheet-tabstoggle[value="backstory"] ~ div .sheet-button4 {outline: 2px solid #a85e84;}
+.charsheet .sheet-tabstoggle[value="skills"] ~ div .sheet-button0 {
+  color: #a85e84;
+  font-weight: 700;
+  background-color: #474b5a;
+  border: 0;
+  border-radius: 0px;
+  box-shadow: none;
+}
+.charsheet .sheet-tabstoggle[value="combat"] ~ div .sheet-button1 {
+  color: #a85e84;
+  font-weight: 700;
+  background-color: #474b5a;
+  border: 0;
+  border-radius: 0px;
+  box-shadow: none;
+}
+.charsheet .sheet-tabstoggle[value="spells"] ~ div .sheet-button2 {
+  color: #a85e84;
+  font-weight: 700;
+  background-color: #474b5a;
+  border: 0;
+  border-radius: 0px;
+  box-shadow: none;
+}
+.charsheet .sheet-tabstoggle[value="inventory"] ~ div .sheet-button3 {
+  color: #a85e84;
+  font-weight: 700;
+  background-color: #474b5a;
+  border: 0;
+  border-radius: 0px;
+  box-shadow: none;
+}
+.charsheet .sheet-tabstoggle[value="backstory"] ~ div .sheet-button4 {
+  color: #a85e84;
+  font-weight: 700;
+  background-color: #474b5a;
+  border: 0;
+  border-radius: 0px;
+  box-shadow: none;
+}
 
 /* show the selected tab */
-.charsheet .sheet-tabstoggle[value="skills"] ~ div.sheet-skils,
+.charsheet .sheet-tabstoggle[value="skills"] ~ div.sheet-skills,
 .charsheet .sheet-tabstoggle[value="combat"] ~ div.sheet-combat,
 .charsheet .sheet-tabstoggle[value="spells"] ~ div.sheet-spells,
 .charsheet .sheet-tabstoggle[value="inventory"] ~ div.sheet-inventory,
 .charsheet .sheet-tabstoggle[value="backstory"] ~ div.sheet-backstory {
-    display: block;
+  display: block;
+  width: 100%;
+  background-color: #474b5a;
+  border: 0.5px 0px 0px 0px solid #5e98a8;
+}
+
+/*Skills tab*/
+.charsheet .sheet-item-skills{
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  grid-template-rows:  60px 60px 60px;
+  grid-template-areas:"skills   skills  combat"
+  grid-gap: 2px;
+  margin: 10px, 10px, 10px, 10px;
+  justify-items: left;
+  padding: 10px;
+/*  border: 0.5px solid #5e98a8;*/
+}
+/*FOOTER*/
+.charsheet .sheetitem-footer{
+
 }
